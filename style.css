@@ -262,37 +262,35 @@ p, li {
     background-color: var(--gw-white);
     border: 1px solid var(--gw-border);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem;
     height: 100%;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(41, 56, 96, 0.02);
-    transition: all 0.3s ease;
-}
-
-.audience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(41, 56, 96, 0.06);
-    border-color: var(--gw-cyan);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 4px 12px rgba(41, 56, 96, 0.02);
 }
 
 .audience-icon {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     background-color: rgba(100, 190, 229, 0.12);
     color: var(--gw-cyan);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    flex-shrink: 0;
 }
 
-.audience-card:hover .audience-icon {
-    background-color: var(--gw-cyan);
-    color: var(--gw-white);
+/* Custom 5-column grid rule for bootstrap grids */
+@media (min-width: 1200px) {
+    .col-xl-2\.4 {
+        flex: 0 0 auto;
+        width: 20% !important;
+    }
 }
+
 
 /* Why Explore List (Section 4) */
 .why-explore-item {
