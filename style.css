@@ -191,6 +191,14 @@ p, li {
     z-index: 3;
 }
 
+.hero-slide-img {
+    aspect-ratio: 1024 / 740;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+    height: auto;
+}
+
 .mockup-image {
     max-width: 100%;
     height: auto;
