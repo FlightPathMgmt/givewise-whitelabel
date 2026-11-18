@@ -419,6 +419,10 @@
                                 <input type="email" class="form-control form-control-lg fs-6" id="emailAddress" name="email" placeholder="jane.doe@firm.com" required>
                             </div>
                             <div class="col-md-6">
+                                <label for="postalCode" class="form-label text-navy fw-semibold small">Firm / Org / Company Postal Code *</label>
+                                <input type="text" class="form-control form-control-lg fs-6" id="postalCode" name="postal_code" placeholder="e.g. M5V 2T6 (Canada Only)" required>
+                            </div>
+                            <div class="col-12">
                                 <label for="organization" class="form-label text-navy fw-semibold small">Firm / Organization / Company *</label>
                                 <input type="text" class="form-control form-control-lg fs-6" id="organization" name="firm_organization_company" placeholder="Acme Wealth Management" required>
                             </div>
@@ -474,6 +478,7 @@
             const firstName = formData.get('first_name') || '';
             const lastName = formData.get('last_name') || '';
             const email = formData.get('email') || '';
+            const postalCode = formData.get('postal_code') || '';
             const org = formData.get('firm_organization_company') || '';
             const comments = formData.get('comments_needs') || '';
 
@@ -491,6 +496,7 @@
                         "Last Name": lastName,
                         "Email Address": email,
                         "Firm / Organization / Company": org,
+                        "Postal Code": postalCode,
                         "Comments / Needs": comments || "None provided",
                         _replyto: email
                     })
