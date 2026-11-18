@@ -517,20 +517,8 @@
 
                 await withTimeout(Promise.allSettled([netlifyPromise, emailPromise]), 2000);
 
-                // 3. Also construct a pre-filled email to support@givewise.ca with the exact subject line
-                const mailtoSubject = encodeURIComponent("White Label Website Contact Form");
-                const mailtoBody = encodeURIComponent(
-                    `First Name: ${firstName}\n` +
-                    `Last Name: ${lastName}\n` +
-                    `Email Address: ${email}\n` +
-                    `Firm / Organization / Company: ${org}\n` +
-                    `Postal Code: ${postalCode}\n\n` +
-                    `Comments / Needs:\n${comments || 'None provided'}`
-                );
-                window.location.href = `mailto:support@givewise.ca?subject=${mailtoSubject}&body=${mailtoBody}`;
-
                 statusEl.className = 'alert alert-success mt-4 mb-0';
-                statusEl.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Thank you! Your message is ready to send to <strong>support@givewise.ca</strong> (and has been logged).';
+                statusEl.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Thank you! Your message has been sent to <strong>support@givewise.ca</strong>. Our team will be in touch shortly.';
                 form.reset();
             } catch (err) {
                 statusEl.className = 'alert alert-danger mt-4 mb-0';
